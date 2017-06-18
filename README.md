@@ -41,10 +41,10 @@ Softcover is a new publishing platform based on the production system and busine
 - For standard convention I'm using `mysoftcover` name of the running container.
 - Now all command similar to [softcover.io](http://manual.softcover.io/book) can be run by simply adding **$mysoftcover** infront of softcover.
 - Example:
-  - # $mysoftcover version
-  - # $mysoftcover help
-  - # $mysoftcover build:pdf
-  - # $mysoftcover build:all
+  - `# $mysoftcover version`
+  - `# $mysoftcover help`
+  - `# $mysoftcover build:pdf`
+  - `# $mysoftcover build:all`
 
 ### Build books
 

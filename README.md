@@ -10,7 +10,9 @@ Softcover is a new publishing platform based on the production system and busine
 
 ### Create a Sample book
 
-`# docker run -v /your/path:/softcover -d meenachisundaram/softcover softcover new my_sample_book`
+```
+# docker run -v /your/path:/softcover -d meenachisundaram/softcover softcover new my_sample_book
+```
 
 - In **/your/path** new *my_sample_book* folder is created.
 - By following the instruction in [softcover.io](http://manual.softcover.io/book) manual edit your sample book.
@@ -18,9 +20,12 @@ Softcover is a new publishing platform based on the production system and busine
 ### Launch Softcover server
 
 - Now launch a softcover server using the following command.
-**Note: Run this command inside the** *my_sample_book* **directory or** *your_existing_book* **directory.**
 
-`# docker run --name mysoftcover -v "$PWD":/softcover -p 4000:4000 -d meenachisundaram/softcover softcover server`
+**Note:** Run this command inside the **my_sample_book** directory or **your_existing_book** directory.
+
+```
+# docker run --name mysoftcover -v "$PWD":/softcover -p 4000:4000 -d meenachisundaram/softcover softcover server
+```
 
 - Change the port value as per your requirement.
 - Name of the container given is `mysoftcover`
@@ -29,7 +34,9 @@ Softcover is a new publishing platform based on the production system and busine
 
 ### Set up temporary ENV variables
 
-`# export mysoftcover="docker exec mysoftcover softcover"`
+```
+# export mysoftcover="docker exec mysoftcover softcover"
+```
 
 - For standard convention I'm using `mysoftcover` name of the running container.
 - Now all command similar to [softcover.io](http://manual.softcover.io/book) can be run by simply adding **$mysoftcover** infront of softcover.
@@ -43,6 +50,8 @@ Softcover is a new publishing platform based on the production system and busine
 
 - Now all types of book can be build using `build:all` command.
 
-`# $mysoftcover build:all `
+```
+# $mysoftcover build:all
+```
 
 - All builded ebooks can be found in `"$PWD"/ebooks` directory.
